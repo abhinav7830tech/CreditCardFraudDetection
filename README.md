@@ -25,8 +25,42 @@ A machine learning project to detect fraudulent credit card transactions using *
 │   ├── roc_pr_curves.png           # ROC & Precision-Recall curves
 │   ├── confusion_matrices.png      # Confusion matrix heatmaps
 │   └── shap_bar.png                # SHAP feature importance
+├── requirements.txt
+├── LICENSE
 └── README.md
 ```
+
+## Visualizations
+
+### Class Distribution
+
+![Fraud Distribution](outputs/fraud_distribution.png)
+
+The dataset is heavily imbalanced — only 0.17% of transactions are fraudulent.
+
+### Amount & Time Distributions
+
+![Amount and Time Distribution](outputs/amount_time_distribution.png)
+
+Distribution of transaction amounts and time across fraudulent and legitimate transactions.
+
+### ROC & Precision-Recall Curves
+
+![ROC and PR Curves](outputs/roc_pr_curves.png)
+
+ROC-AUC and Precision-Recall curves comparing Random Forest and XGBoost performance.
+
+### Confusion Matrices
+
+![Confusion Matrices](outputs/confusion_matrices.png)
+
+Confusion matrix heatmaps for both models on the test set.
+
+### SHAP Feature Importance
+
+![SHAP Feature Importance](outputs/shap_bar.png)
+
+Top 10 features by mean SHAP value for the XGBoost model.
 
 ## Pipeline Overview
 
@@ -54,7 +88,7 @@ A machine learning project to detect fraudulent credit card transactions using *
 ## Installation
 
 ```bash
-pip install pandas numpy matplotlib seaborn scikit-learn imbalanced-learn xgboost shap joblib
+pip install -r requirements.txt
 ```
 
 ## Usage
